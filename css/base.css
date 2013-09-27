@@ -1,0 +1,99 @@
+html {
+  margin: 0;
+  background: #333;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+  font-family: Helvetica, Arial;
+  color: #fff;
+}
+
+a {
+  color: #ddd;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(219, 55, 40);
+}
+
+div#infoback {
+  position:absolute; top: 0; right: 0;
+  bottom: 0; width: 360px; background:#2A0A0A;
+  opacity:0.8;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div#collapse {
+  position:absolute; top: 0; right: 131px;
+}
+
+div#info { 
+  margin: 132px 72px;
+}
+
+div#info h2 { 
+  margin-bottom: 0px;
+}
+
+#map {   
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  width:100%;
+}
+
+.leaflet-popup-content {
+  color: #333;
+}
+
+.leaflet-popup-content h2{
+  margin: 0;
+}
+
+.disclaimer {
+  font-size: 0.7em;
+}
+
+/* NO UI SLIDER */
+.slider-box {
+    bottom: 0;
+    left: 0;
+    padding: 6px 8px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    cursor: default;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: grey;
+    height: 8px;
+    width:250px;
+    cursor: pointer;
+
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: white;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: ew-resize;
+}
+/* Timeline Date Range */
+.week {
+    text-align: left;
+    height: 20px;
+    padding: 4px 6px;
+    font-size: 14px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    color: black;
+}
