@@ -1,4 +1,5 @@
-us_fire_compare
+U.S. Fire Comparison Map
 ===============
 
-map comparing US major fires by year, by temporal slider
+[Map](http://abenrob.github.io/us_fire_compare/) comparing US major fires by year, with temporal slider
+
