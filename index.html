@@ -12,6 +12,56 @@
 </head>
 <body>
   <div id="map"></div>
+    <div class="block">
+      <h4>2009-2013 fires by week of year</h4>
+      <div class="legend">
+        <svg class="sizeref" xmlns="http:www.w3.org/2000/svg" version="1.1">
+          <circle cx="25" cy="22" r="20" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.7)" />
+          <text x="55" y="28">> 100,000 acres</text>
+          <circle cx="25" cy="64" r="16" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.7)" />
+          <text x="55" y="70">50,000 - 100,000 acres</text>
+          <circle cx="25" cy="97" r="12" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.7)" />
+          <text x="55" y="103">25,000 - 50,000 acres</text>
+          <circle cx="25" cy="122" r="8" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.7)" />
+          <text x="55" y="128">15,000 - 25,000 acres</text>
+          <circle cx="25" cy="140" r="4" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.7)" />
+          <text x="55" y="147">5,000 - 15,000 acres</text>
+          <circle cx="25" cy="158" r="2" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.7)" />
+          <text x="55" y="163">< 5,000 acres</text>
+        </svg>
+        <svg class="yearref" xmlns="http:www.w3.org/2000/svg" version="1.1">
+          <text x="0" y="15">2013</text>
+          <text x="40" y="15">2012</text>
+          <text x="80" y="15">2011</text>
+          <text x="120" y="15">2010</text>
+          <text x="160" y="15">2009</text>
+          <circle cx="15" cy="30" r="8" stroke="#BD0026" stroke-width="1" fill="rgba(189,0,38,0.7)" />
+          <circle cx="55" cy="30" r="8" stroke="#F03B20" stroke-width="1" fill="rgba(240,59,32,0.7)" />
+          <circle cx="95" cy="30" r="8" stroke="#FD8D3C" stroke-width="1" fill="rgba(253,141,60,0.7)" />
+          <circle cx="135" cy="30" r="8" stroke="#FECC5C" stroke-width="1" fill="rgba(254,204,92,0.7)" />
+          <circle cx="175" cy="30" r="8" stroke="#FFFFB2" stroke-width="1" fill="rgba(255,255,178,0.7)" />
+        </svg>
+      </div>
+      <h4>Sources/Info:</h4>
+      <p>
+        <strong><a href="http://activefiremaps.fs.fed.us/lg_fire2.php#">Active Fire Mapping Program</a></strong>
+      </p>
+      <p>
+        These data represent large fire incidents in the United States. Data are from the <a href="http://activefiremaps.fs.fed.us/">Active Fire Mapping Program</a> at the US Forest Service.
+      </p>
+      <p>
+        The basemaps being used are from <a href="http://mapbox.com">Mapbox</a> and the mapping javascript library is <a href="http://leafletjs.com">Leaflet</a>. 
+      </p>
+      <p class="disclaimer">
+        The information on this map was derived from USFS. This map's creators cannot accept any responsibility for errors, omissions, or positional accuracy. There are no warranties, expressed or implied, including the warranty of merchantability or fitness for a particular purpose, accompanying this product. However, notification of any errors will be appreciated.
+      </p>
+    </div>
+  <div class="trigger">
+    <div class="stack rotate">
+        map info
+    </div>
+  </div>
+
   <link rel="points" href="data/fires_week.geojson"/>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
