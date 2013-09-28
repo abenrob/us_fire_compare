@@ -1,3 +1,17 @@
+var open = 0;
+$(".trigger" ).click(function() {
+    if (open == 0) {
+        $(".block" ).animate({ "left": "+=300px" }, "slow" );
+        $(".trigger" ).animate({ "left": "+=300px" }, "slow" );
+        open = 1;
+    }
+    else if (open == 1) {
+        $(".block" ).animate({ "left": "-=300px" }, "slow" );
+        $(".trigger" ).animate({ "left": "-=300px" }, "slow" );
+        open = 0;
+    }
+});
+
 var points_in, geojson, theWeek;
 
 var dark = L.tileLayer(
