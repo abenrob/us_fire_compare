@@ -84,7 +84,7 @@ function geojsonMarkerOptions(feature,color) {
 };
 
 function filterFeatures(feature, layer) { 
-  var value = $('#sliderbar').val();
+  var value = $('#slider').slider('value');
   var _dateWk = new Date(feature.properties.pull_date).getWeek();
   theWeek.update(value);
   if (_dateWk == value){
@@ -139,7 +139,7 @@ theWeek.addTo(map);
 var slider = L.control({position: 'bottomright'});
 slider.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'slider-box');
-    this._div.innerHTML = ('<div id="slider-box"><input id="sliderbar" type="range" min="1" max="52" value="1" step="1" onchange="changeValue(this.value)" /></div>');
+    this._div.innerHTML = ('<div id="slider"></div>');
     return this._div;
 };
 slider.addTo(map);
@@ -152,7 +152,17 @@ $('.slider-box').hover(
     map.dragging.enable();
   }
 );
-
+$("#slider").slider(
+    {
+      value:26,
+      min: 1,
+      max: 52,
+      step: 1,
+      slide: function( event, ui ) {
+        changeValue(ui.value);
+      }
+    }
+  );
 
 $.getJSON($('link[rel="points"]').attr("href"), function(data) {
   points_in = data;
@@ -160,10 +170,13 @@ $.getJSON($('link[rel="points"]').attr("href"), function(data) {
       onEachFeature: onEachFeature,
       pointToLayer: function (feature, latlng) {
           return L.circleMarker(latlng, geojsonMarkerOptions(feature,colors.red));
-      }
+      },
+      filter: filterFeatures
   });
-  $('#sliderbar').val(26);
-  changeValue();
+  
+
+  //$('#sliderbar').val(26);
+  //changeValue();
   geojson.addTo(map);
   map.fitBounds(geojson.getBounds());
 });

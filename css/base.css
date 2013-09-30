@@ -63,16 +63,20 @@ div#info h2 {
   font-size: 0.7em;
 }
 
-/* NO UI SLIDER */
+/* JQ UI SLIDER */
 .slider-box {
     bottom: 0;
     left: 0;
-    padding: 6px 8px;
+    padding: 10px 10px 9px 10px;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 4px;
     cursor: default;
 }
+#slider {
+  width: 300px;
+}
+
 
 input[type=range] {
     -webkit-appearance: none;
