@@ -139,7 +139,7 @@ theWeek.addTo(map);
 var slider = L.control({position: 'bottomright'});
 slider.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'slider-box');
-    this._div.innerHTML = ('<div id="slider"></div>');
+    this._div.innerHTML = ('<div class="week"></div><div id="slider"></div>');
     return this._div;
 };
 slider.addTo(map);
