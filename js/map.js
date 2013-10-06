@@ -164,7 +164,7 @@ $("#slider").slider(
     }
   );
 
-$.getJSON($('link[rel="points"]').attr("href"), function(data) {
+$.getJSON('data/fires_week.geojson', function(data) {
   points_in = data;
   geojson = L.geoJson(points_in, {
       onEachFeature: onEachFeature,
